@@ -4,17 +4,21 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
-  <body style="margin: 0; overflow: hidden;">
+ <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
-      <a-marker type="pattern" url="my-logo.patt">
-       <a-entity
-        gltf-model="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF-Binary/Duck.glb"
-        scale="0.5 0.5 0.5"
-        position="0 0 0"
-        rotation="0 180 0"
-       >   
-       </a-entity>
+      <a-assets>
+        <a-asset-item id="mymodel" src="https://limewire.com/d/JhTyh#pEijoWA72d"></a-asset-item>
+      </a-assets>
+
+      <a-marker type="pattern" url="your-marker.patt">
+        <a-entity 
+          gltf-model="#mymodel" 
+          scale="0.5 0.5 0.5" 
+          position="0 0 0" 
+          rotation="0 180 0">
+        </a-entity>
       </a-marker>
+
       <a-entity camera></a-entity>
     </a-scene>
   </body>
