@@ -1,28 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ar.js test</title>
   </head>
-  <body style="margin: 0; overflow: hidden">
+  <body>
     <div style="width: 200px; height: 200px; border: 1px solid black">
-      <a-scene
-        embedded
-        arjs
-        vr-mode-ui="enabled: false"
-        style="width: 100%; height: 100%"
-      >
-        <a-marker type="pattern" url="my-logo.patt">
-          <a-entity
-            gltf-model="darahtBeta.glb"
-            scale="1 1 1"
-            position="0 0 0"
-            rotation="0 180 0"
-          >
-          </a-entity>
-        </a-marker>
-        <a-entity camera></a-entity>
-      </a-scene>
+      <iframe
+        src="ar.html"
+        width="100%"
+        height="100%"
+        style="border: none"
+      ></iframe>
     </div>
   </body>
 </html>
